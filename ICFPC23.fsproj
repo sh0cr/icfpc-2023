@@ -10,6 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="DotNumerics" Version="1.1.0" />
     <PackageReference Include="FSharp.Data" Version="6.2.0" />
     <PackageReference Include="FSharp.Stats" Version="0.4.12-preview.3" />
   </ItemGroup>
