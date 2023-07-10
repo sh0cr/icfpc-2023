@@ -14,7 +14,7 @@ type SolutionBody = {
 }
 
 let loadSolution problemId =
-    let path = "./solutions/" + problemId.ToString() + "vol.json"
+    let path = "./grouped_solutions/" + problemId.ToString() + "vol.json"
     use sr = new StreamReader(path)
     let placements = sr.ReadToEnd()
     let body = {problem_id = problemId; contents = placements}
@@ -32,5 +32,7 @@ let loadSolution problemId =
     } |> Async.AwaitTask
     |> Async.RunSynchronously
 
-[| 2 .. 55 |]
+
+
+[| 1;52;53 |]
 |> Array.iter (fun i -> loadSolution i)
